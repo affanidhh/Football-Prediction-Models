@@ -12,13 +12,14 @@ football-prediction-models/
 │   ├── predictive_model.py
 │   ├── search_model.py
 │   └── comparison_model.py
+├── download_data.py
 ├── README.md
 ```
 
 ## Contenu des Fichiers
 
 ### `data/historical_data.csv`
-Assurez-vous d'avoir un fichier CSV contenant les données historiques des matchs. Ce fichier devrait inclure des colonnes telles que `HomeTeam`, `AwayTeam`, `HomeGoals`, `AwayGoals`, etc.
+Ce fichier CSV contient les données historiques des matchs. Utilisez le script `download_data.py` pour le générer.
 
 ### `models/predictive_model.py`
 Ce fichier contient le modèle prédictif basé sur LSTM pour prédire les scores des matchs.
@@ -28,6 +29,9 @@ Ce fichier contient une fonction de recherche pour trouver des matchs impliquant
 
 ### `models/comparison_model.py`
 Ce fichier contient une fonction de comparaison pour comparer les statistiques de plusieurs équipes.
+
+### `download_data.py`
+Ce script télécharge les données des matchs de Ligue 1 depuis l'API Football-Data.org et les enregistre dans un fichier CSV.
 
 ## Utilisation
 
@@ -65,6 +69,20 @@ Pour comparer les statistiques de plusieurs équipes, utilisez la fonction `comp
 comparison_result = compare_multiple_teams('PSG', 'Lyon', 'Marseille')
 print(comparison_result)
 ```
+
+### 4. Téléchargement des Données Historiques
+
+Pour télécharger les données historiques des matchs de Ligue 1 et les enregistrer dans un fichier CSV, exécutez le script `download_data.py`.
+
+1. **Créer le Répertoire `data`** : Assurez-vous que le répertoire `data` existe dans votre dépôt. Si ce n'est pas le cas, créez-le.
+   ```bash
+   mkdir data
+   ```
+
+2. **Exécuter le Script** : Exécutez le script Python pour télécharger les données et les enregistrer dans le fichier CSV.
+   ```bash
+   python download_data.py
+   ```
 
 ## Contribuer
 
