@@ -24,7 +24,7 @@ Assurez-vous d'avoir un fichier CSV contenant les données historiques des match
 Ce fichier contient le modèle prédictif basé sur LSTM pour prédire les scores des matchs.
 
 ### `models/search_model.py`
-Ce fichier contient une fonction de recherche pour trouver des matchs impliquant une équipe spécifique.
+Ce fichier contient une fonction de recherche pour trouver des matchs impliquant une équipe spécifique, ainsi qu'une fonction pour rechercher des matchs par année.
 
 ### `models/comparison_model.py`
 Ce fichier contient une fonction de comparaison pour comparer les statistiques de plusieurs équipes.
@@ -45,8 +45,15 @@ print(predict_score('PSG', 'Lyon'))
 Pour rechercher des matchs impliquant une équipe spécifique, utilisez la fonction `search_team` dans `search_model.py`.
 
 ```python
-# Exemple de recherche
+# Exemple de recherche par équipe
 print(search_team('PSG'))
+```
+
+Pour rechercher des matchs par année, utilisez la fonction `search_by_year` dans `search_model.py`.
+
+```python
+# Exemple de recherche par année
+print(search_by_year(2023))
 ```
 
 ### 3. Comparaison de Plusieurs Équipes
